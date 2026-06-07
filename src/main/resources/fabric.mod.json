@@ -3,13 +3,13 @@
   "id": "bedrockcracker",
   "version": "${version}",
   "name": "BedrockCracker",
-  "description": "",
+  "description": "A mod allows you to easily crack world seed through bedrock patterns.",
   "authors": [
     "MiranCZ",
     "MoRanYue"
   ],
   "contact": {
-    "repo": "https://github.com/MiranCZ/BedrockSeedCracker"
+    "sources": "https://github.com/MoRanYue/BedrockSeedCracker"
   },
   "license": "MIT",
   "icon": "assets/bedrockcracker/icon.png",
