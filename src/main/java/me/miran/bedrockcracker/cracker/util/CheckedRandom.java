@@ -1,6 +1,6 @@
 package me.miran.bedrockcracker.cracker.util;
 
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.Mth;
 
 
 /**
@@ -51,7 +51,7 @@ public class CheckedRandom {
         }
 
         public CheckedRandom split(int x, int y, int z) {
-            long l = MathHelper.hashCode(x, y, z);
+            long l = Mth.getSeed(x, y, z);
             long m = l ^ this.seed;
             return new CheckedRandom(m);
         }

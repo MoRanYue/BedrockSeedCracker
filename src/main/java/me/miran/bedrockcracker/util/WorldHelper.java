@@ -1,15 +1,15 @@
 package me.miran.bedrockcracker.util;
 
-import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.Minecraft;
 
 public class WorldHelper {
 
     public static Dimension getDimension() {
-        if (MinecraftClient.getInstance().world == null) return null;
+        if (Minecraft.getInstance().level == null) return null;
 
-        String dimensionID = MinecraftClient.getInstance().world.getRegistryKey().getValue().toString();
+        String dimensionID = Minecraft.getInstance().level.dimension().identifier().toString();
 
-        switch (dimensionID){
+        switch (dimensionID) {
             case "minecraft:overworld" -> {
                 return Dimension.OVERWORLD;
             }
@@ -30,6 +30,4 @@ public class WorldHelper {
         NETHER,
         END
     }
-
-
 }
