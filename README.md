@@ -10,7 +10,9 @@ If you find any bugs I would be happy if you report them in the [issues](https:/
 
 # How to use
 You need to visit both the overworld and the nether to collect bedrock patterns there. The mod will tell you in chat once you collect enough bedrock.
+
 It's not some crazy amount (512 pieces for the overworld and 128 floor and roof each for the nether), so even small render distances should work.
+
 Then you just execute the `/crackseed` command and wait.
 
 ### How long does it take?
