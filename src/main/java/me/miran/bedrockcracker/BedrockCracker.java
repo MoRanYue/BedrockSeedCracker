@@ -66,13 +66,17 @@ public class BedrockCracker implements ModInitializer {
     }
 
     public static void sendChatMessage(Component message) {
-        if (Minecraft.getInstance().player == null) return;
-
         if (!settings.logProgress) return;
 
-        Minecraft.getInstance().player.sendSystemMessage(
-            Component.literal(CHAT_PREFIX).append(message)
-        );
+        Minecraft minecraft = Minecraft.getInstance();
+
+        minecraft.execute(() -> {
+            if (minecraft.player == null) return;
+
+            minecraft.player.sendSystemMessage(
+                Component.literal(CHAT_PREFIX).append(message)
+            );
+        });
     }
 
     public static void crackWorldSeed() {

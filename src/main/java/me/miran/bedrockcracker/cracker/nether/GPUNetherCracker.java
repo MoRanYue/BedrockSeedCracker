@@ -3,6 +3,7 @@ package me.miran.bedrockcracker.cracker.nether;
 import me.miran.bedrockcracker.cracker.util.jocl.Buffer;
 import me.miran.bedrockcracker.cracker.util.jocl.IntBuffer;
 import me.miran.bedrockcracker.cracker.util.jocl.LongBuffer;
+import me.miran.bedrockcracker.util.CrackProgress;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.Resource;
@@ -93,11 +94,14 @@ class GPUNetherCracker extends AbstractNetherCracker implements AutoCloseable {
         List<Long> output = new ArrayList<>();
         int loopLimit = 1 << 6;
 
+        CrackProgress.reset("Nether GPU seed search");
+
         for (int i = 0; i < loopLimit; i++) {
-            // FIXME 16384 is an arbitrary size
             output.addAll(calculateBatch(tests, i, 16384));
-            System.out.println(i + "/" + loopLimit);
+            CrackProgress.report("Nether GPU seed search", i + 1L, loopLimit);
         }
+
+        CrackProgress.done("Nether GPU seed search");
 
         return output;
     }
