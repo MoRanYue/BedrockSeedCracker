@@ -1,19 +1,18 @@
 THIS MOD JUST USES THE BEDROCK BLOCK, IT IS FOR JAVA EDITION
 
-This is basically a java port of [MisterX's "NetherBedrockCracker"](https://github.com/19MisterX98/Nether_Bedrock_Cracker) written in rust.
+This is basically a java port of [MisterX's "NetherBedrockCracker"](https://github.com/19MisterX98/Nether_Bedrock_Cracker) written in Rust.
 It has the addition of also being able to crack the world seed (even if the world's seed is set manually).
-
 
 A relatively small fabric mod for finding Minecraft seed using bedrock patterns...
 
-If you find any bugs I would be happy if you report them in the [issues](https://github.com/MiranCZ/BedrockSeedCracker/issues)
+If you find any bugs I would be happy if you report them in the [issues](https://github.com/MoRanYue/BedrockSeedCracker/issues)
 
 # How to use
 You need to visit both the overworld and the nether to collect bedrock patterns there. The mod will tell you in chat once you collect enough bedrock.
 
 It's not some crazy amount (512 pieces for the overworld and 128 floor and roof each for the nether), so even small render distances should work.
 
-Then you just execute the `/crackseed` command and wait.
+Then you just execute the `/crackseed` command and wait, crack progress will be printed.
 
 ### How long does it take?
 The time really depends on your machine. The program is more or less going through almost all structure seeds, so it can range from like 30 seconds to a couple of minutes.
